@@ -7,6 +7,9 @@
 .env.production
 .env.test
 *.env
+# But DO commit .env.example files
+!.env.example
+**/.env.example
 
 # Dependencies
 node_modules/
