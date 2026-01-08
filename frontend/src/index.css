@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3D Card Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Golden Oats Design System - Warm, Natural & Authentic */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 98%;
+    --foreground: 25 30% 15%;
+    
+    /* Status bar */
+    --status-bar: 25 40% 20%;
+    --status-bar-foreground: 40 33% 98%;
+    
+    /* Navigation - earthy tones */
+    --nav-background: 40 33% 98%;
+    --nav-foreground: 25 30% 25%;
+    --nav-hover: 30 60% 35%;
+    
+    /* Primary - rich golden brown */
+    --primary: 30 60% 35%;
+    --primary-foreground: 40 33% 98%;
+    --primary-hover: 30 55% 30%;
+    
+    /* Secondary - warm beige */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 30% 25%;
+    
+    --muted: 35 25% 94%;
+    --muted-foreground: 25 20% 45%;
+    
+    /* Accent - golden honey */
+    --accent: 38 70% 50%;
+    --accent-foreground: 25 30% 15%;
+    
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 30 60% 35%;
+    
+    /* Cards and surfaces */
+    --card: 40 33% 99%;
+    --card-foreground: 25 30% 15%;
+    
+    --popover: 40 33% 99%;
+    --popover-foreground: 25 30% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 33% 98%;
+    
+    --radius: 0.5rem;
+    
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 35 30% 96%;
+    --sidebar-foreground: 25 30% 25%;
+    --sidebar-primary: 30 60% 35%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 25 30% 20%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 30 60% 45%;
+  }
+
+  .dark {
+    --background: 25 25% 10%;
+    --foreground: 40 20% 95%;
+    
+    --status-bar: 25 30% 8%;
+    --status-bar-foreground: 40 20% 95%;
+    
+    --nav-background: 25 25% 12%;
+    --nav-foreground: 40 20% 85%;
+    --nav-hover: 38 70% 55%;
+    
+    --primary: 38 70% 50%;
+    --primary-foreground: 25 30% 10%;
+    --primary-hover: 38 65% 45%;
+    
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 40 20% 85%;
+    
+    --muted: 25 20% 18%;
+    --muted-foreground: 40 15% 60%;
+    
+    --accent: 38 70% 50%;
+    --accent-foreground: 25 30% 10%;
+    
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
+    --ring: 38 70% 50%;
+    
+    --card: 25 25% 12%;
+    --card-foreground: 40 20% 95%;
+    
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 20% 95%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 40 20% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+  }
+}
