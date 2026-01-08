@@ -105,7 +105,7 @@ const createOnlineOrder = catchAsyncError(async (request, response) => {
     event = stripe.webhooks.constructEvent(
       request.body,
       sig,
-      "whsec_fcatGuOKvXYUQoz5NWSwH9vaqdWXIWsI"
+      process.env.STRIPE_WEBHOOK_SECRET || ""
     );
   } catch (err) {
     return response.status(400).send(`Webhook Error: ${err.message}`);
